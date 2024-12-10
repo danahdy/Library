@@ -14,56 +14,56 @@ This is a Library API built using PHP, Slim framework, Firebase JWT for authenti
 
 ### User Registration
 
-- *URL:* /user/register
-- *Method:* POST
-- *Payload:*
-    
+- **URL:** `/user/register`
+- **Method:** `POST`
+- **Payload:**
+    ```json
     {
         "username": "string",
         "password": "string"
     }
-    
-- *Response:*
-    
+    ```
+- **Response:**
+    ```json
     {
         "status": "success",
         "data": null
     }
-    
+    ```
 
 ### User Login
 
-- *URL:* /user/login
-- *Method:* POST
-- *Payload:*
-    
+- **URL:** `/user/login`
+- **Method:** `POST`
+- **Payload:**
+    ```json
     {
         "username": "string",
         "password": "string"
     }
-    
-- *Response:*
-    
+    ```
+- **Response:**
+    ```json
     {
         "status": "success",
         "data": {
             "token": "string"
         }
     }
-    
+    ```
 
 ### User Authentication
 
-- *URL:* /user/auth
-- *Method:* POST
-- *Payload:*
-    
+- **URL:** `/user/auth`
+- **Method:** `POST`
+- **Payload:**
+    ```json
     {
         "token": "string"
     }
-    
-- *Response:*
-    
+    ```
+- **Response:**
+    ```json
     {
         "status": "success",
         "data": {
@@ -71,20 +71,20 @@ This is a Library API built using PHP, Slim framework, Firebase JWT for authenti
             "password": "string"
         }
     }
-    
+    ```
 
 ### View Employee
 
-- *URL:* /user/viewEmployee
-- *Method:* POST
-- *Payload:*
-    
+- **URL:** `/user/viewEmployee`
+- **Method:** `POST`
+- **Payload:**
+    ```json
     {
         "token": "string"
     }
-    
-- *Response:*
-    
+    ```
+- **Response:**
+    ```json
     {
         "status": "success",
         "data": {
@@ -92,102 +92,102 @@ This is a Library API built using PHP, Slim framework, Firebase JWT for authenti
             "password": "string"
         }
     }
-    
+    ```
 
 ### Author Registration
 
-- *URL:* /author/register
-- *Method:* POST
-- *Payload:*
-    
+- **URL:** `/author/register`
+- **Method:** `POST`
+- **Payload:**
+    ```json
     {
         "username": "string",
         "password": "string"
     }
-    
-- *Response:*
-    
+    ```
+- **Response:**
+    ```json
     {
         "status": "Author Registered Successfully",
         "data": null
     }
-    
+    ```
 
 ### Author Login
 
-- *URL:* /author/login
-- *Method:* POST
-- *Payload:*
-    
+- **URL:** `/author/login`
+- **Method:** `POST`
+- **Payload:**
+    ```json
     {
         "username": "string",
         "password": "string"
     }
-    
-- *Response:*
-    
+    ```
+- **Response:**
+    ```json
     {
         "status": "Author Log In Successfully",
         "data": {
             "token": "string"
         }
     }
-    
+    ```
 
 ### Author Authentication
 
-- *URL:* /author/auth
-- *Method:* POST
-- *Payload:*
-    
+- **URL:** `/author/auth`
+- **Method:** `POST`
+- **Payload:**
+    ```json
     {
         "username": "string",
         "password": "string"
     }
-    
-- *Response:*
-    
+    ```
+- **Response:**
+    ```json
     {
         "status": "Author Authenticated",
         "data": {
             "token": "string"
         }
     }
-    
+    ```
 
 ### Post Book
 
-- *URL:* /author/postBook
-- *Method:* POST
-- *Payload:*
-    
+- **URL:** `/author/postBook`
+- **Method:** `POST`
+- **Payload:**
+    ```json
     {
         "token": "string",
         "title": "string"
     }
-    
-- *Response:*
-    
+    ```
+- **Response:**
+    ```json
     {
         "status": "success",
         "data": {
             "message": "Book posted successfully"
         }
     }
-    
+    ```
 
 ### View All Books
 
-- *URL:* /books/viewallbooks
-- *Method:* POST
-- *Payload:*
-    
+- **URL:** `/books/viewallbooks`
+- **Method:** `POST`
+- **Payload:**
+    ```json
     {
         "token": "string"
     }
-    
-- *Response:*
-    
+    ```
+- **Response:**
+    ```json
     {
         "status": "success",
         "data": [
@@ -197,20 +197,20 @@ This is a Library API built using PHP, Slim framework, Firebase JWT for authenti
             }
         ]
     }
-    
+    ```
 
 ### View All Authors
 
-- *URL:* /author/viewallauthor
-- *Method:* POST
-- *Payload:*
-    
+- **URL:** `/author/viewallauthor`
+- **Method:** `POST`
+- **Payload:**
+    ```json
     {
         "token": "string"
     }
-    
-- *Response:*
-    
+    ```
+- **Response:**
+    ```json
     {
         "status": "success",
         "data": [
@@ -220,43 +220,43 @@ This is a Library API built using PHP, Slim framework, Firebase JWT for authenti
             }
         ]
     }
-    
+    ```
 
 ### Delete Book
 
-- *URL:* /books/delete
-- *Method:* DELETE
-- *Payload:*
-    
+- **URL:** `/books/delete`
+- **Method:** `DELETE`
+- **Payload:**
+    ```json
     {
         "bookid": "integer",
         "token": "string"
     }
-    
-- *Response:*
-    
+    ```
+- **Response:**
+    ```json
     {
         "status": "success",
         "data": {
             "title": "Book deleted successfully"
         }
     }
-    
+    ```
 
 ### View Book by Author
 
-- *URL:* /books/author/view
-- *Method:* POST
-- *Payload:*
-    
+- **URL:** `/books/author/view`
+- **Method:** `POST`
+- **Payload:**
+    ```json
     {
         "token": "string",
         "authorid": "integer",
         "bookid": "integer"
     }
-    
-- *Response:*
-    
+    ```
+- **Response:**
+    ```json
     {
         "status": "success",
         "data": {
@@ -266,4 +266,8 @@ This is a Library API built using PHP, Slim framework, Firebase JWT for authenti
             }
         }
     }
-    
+    ```
+
+## License
+
+This project is licensed under the MIT License.
